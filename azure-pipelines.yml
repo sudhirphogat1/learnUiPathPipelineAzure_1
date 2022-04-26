@@ -29,7 +29,7 @@ stages:
     dependsOn: Build
     condition: succeeded()
     jobs:
-      - deployment: deployOrcPip
+      - deployment: DeplayDEV
         displayName: Deploy package to Orchestrator
         pool: MyLocalMachine
         environment: DEV
