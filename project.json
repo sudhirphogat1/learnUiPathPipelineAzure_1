@@ -1,6 +1,6 @@
 {
-  "name": "GitPipeline_1",
-  "description": "Git Pipeline",
+  "name": "GitPipeline_2",
+  "description": "Git Pipeline_Changed the Project name to test again",
   "main": "Main.xaml",
   "dependencies": {
     "UiPath.Mail.Activities": "[1.15.1]",
