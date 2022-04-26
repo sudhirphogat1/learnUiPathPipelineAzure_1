@@ -41,5 +41,5 @@ stages:
               inputs:
                 orchestratorConnection: '8DEv1AMNXczW3y4U15LL3jYf62jK93n5'
                 packagesPath: '$(Pipeline.Workspace)\drop\'
+                entryPoints: 'Main.xaml'
                 folderName: 'RenuIT'
-		            entryPoints: 'Main.xaml'
