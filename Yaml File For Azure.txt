@@ -19,7 +19,7 @@ stages:
           versionType: 'AutoVersion'
           projectJsonPath: '$(Build.SourcesDirectory)'
           outputType: 'Process'
-          orchestratorConnection: '8DEv1AMNXczW3y4U15LL3jYf62jK93n5'
+          orchestratorConnection: 'UiPath Connection'
           outputPath: '$(Build.ArtifactStagingDirectory)'
       - publish: $(Build.ArtifactStagingDirectory)
         artifact: drop
@@ -39,7 +39,7 @@ stages:
            steps:
             - task: UiPathDeploy@2
               inputs:
-                orchestratorConnection: '8DEv1AMNXczW3y4U15LL3jYf62jK93n5'
+                orchestratorConnection: 'UiPath Connection'
                 packagesPath: '$(Pipeline.Workspace)\drop\'
                 entryPoints: 'Main.xaml'
                 folderName: 'RenuIT'
@@ -54,6 +54,6 @@ stages:
         steps:
         - task: UiPathRunJob@2
           inputs:
-            orchestratorConnection: '8DEv1AMNXczW3y4U15LL3jYf62jK93n5'
+            orchestratorConnection: 'UiPath Connection'
             processName: 'GitPipeline_3_Main.xaml'
             folderName: 'RenuIT'
