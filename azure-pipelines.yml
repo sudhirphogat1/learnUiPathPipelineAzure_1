@@ -29,7 +29,7 @@ stages:
     dependsOn: Build
     condition: succeeded()
     jobs:
-      - deployment: DeplayDEV
+      - deployment: DeployDEV
         displayName: Deploy package to Orchestrator
         pool: MyLocalMachine
         environment: DEV
@@ -46,8 +46,8 @@ stages:
   
   - stage: Execute
     displayName: Execute the process
-    dependsOn: 
-    condition: 
+    dependsOn: DeployDEV
+    condition: succeeded()
     jobs:
       - job: ExecuteCode
         pool: MyLocalMachine
